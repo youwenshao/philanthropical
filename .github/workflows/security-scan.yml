@@ -1,0 +1,68 @@
+name: Security Scan
+
+on:
+  pull_request:
+    paths:
+      - 'contracts/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'contracts/**'
+
+jobs:
+  slither:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Slither
+        run: |
+          pip install slither-analyzer
+
+      - name: Install dependencies
+        working-directory: ./contracts
+        run: npm ci
+
+      - name: Compile contracts
+        working-directory: ./contracts
+        run: npm run compile
+
+      - name: Run Slither
+        working-directory: ./contracts
+        run: |
+          slither . --exclude-dependencies --exclude-informational --exclude-optimization --exclude-low
+        continue-on-error: true
+
+      - name: Check for high/critical issues
+        run: |
+          if slither . --exclude-dependencies --exclude-informational --exclude-optimization --exclude-low 2>&1 | grep -E "(HIGH|CRITICAL)"; then
+            echo "High or critical security issues found!"
+            exit 1
+          fi
+
+  dependency-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./contracts
+        run: npm ci
+
+      - name: Run npm audit
+        working-directory: ./contracts
+        run: npm audit --audit-level=high
+

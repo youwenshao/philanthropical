@@ -1,0 +1,54 @@
+name: Deploy Contracts
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'contracts/**'
+
+env:
+  POLYGON_MUMBAI_RPC_URL: ${{ secrets.POLYGON_MUMBAI_RPC_URL }}
+  PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
+  POLYGONSCAN_API_KEY: ${{ secrets.POLYGONSCAN_API_KEY }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: contracts/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./contracts
+        run: npm ci
+
+      - name: Compile contracts
+        working-directory: ./contracts
+        run: npm run compile
+
+      - name: Run tests
+        working-directory: ./contracts
+        run: npm run test
+
+      - name: Deploy to Mumbai
+        working-directory: ./contracts
+        run: npm run deploy:mumbai
+        env:
+          POLYGON_MUMBAI_RPC_URL: ${{ secrets.POLYGON_MUMBAI_RPC_URL }}
+          PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
+
+      - name: Verify contracts
+        working-directory: ./contracts
+        run: npm run verify:mumbai
+        env:
+          POLYGONSCAN_API_KEY: ${{ secrets.POLYGONSCAN_API_KEY }}
+

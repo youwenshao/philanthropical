@@ -1,0 +1,12 @@
+{
+  "detectors_to_run": "all",
+  "exclude_dependencies": true,
+  "exclude_informational": false,
+  "exclude_optimization": true,
+  "exclude_low": false,
+  "exclude_medium": false,
+  "exclude_high": false,
+  "json": "slither-report.json",
+  "print": "human-summary"
+}
+

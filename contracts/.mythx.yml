@@ -1,0 +1,25 @@
+# MythX configuration
+mythx:
+  # API credentials (set via environment variables)
+  # MYTHX_API_KEY: your_api_key
+  # MYTHX_API_SECRET: your_api_secret
+  
+  # Analysis mode: quick, standard, deep
+  mode: standard
+  
+  # Timeout in seconds
+  timeout: 300
+  
+  # Project name
+  project: philanthropical-contracts
+  
+  # Solidity compiler version
+  solc_version: 0.8.19
+  
+  # Contracts to analyze
+  contracts:
+    - DonationRegistry
+    - CharityVerification
+    - ImpactEscrow
+    - VerificationOracle
+
