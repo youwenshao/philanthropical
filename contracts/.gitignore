@@ -1,6 +1,13 @@
 node_modules/
 .env
 .env.local
+*.env
+*.key
+*.pem
+*secret*
+*private*
+*api*key*
+*apikey*
 dist/
 cache/
 artifacts/

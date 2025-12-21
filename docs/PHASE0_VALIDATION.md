@@ -93,22 +93,22 @@ Phase 0 foundation implementation has been validated through comprehensive testi
 
 The following steps require manual execution with network access and private keys:
 
-### 1. Contract Deployment to Mumbai Testnet
+### 1. Contract Deployment to Amoy Testnet
 **Status**: ⏳ PENDING MANUAL EXECUTION
 
 **Requirements**:
-- Mumbai testnet MATIC in deployer wallet (minimum 0.1 MATIC)
+- Amoy testnet MATIC in deployer wallet (minimum 0.1 MATIC)
 - Environment variables in `contracts/.env`:
-  - `POLYGON_MUMBAI_RPC_URL`
+  - `POLYGON_AMOY_RPC_URL`
   - `PRIVATE_KEY` (deployer wallet)
-  - `POLYGONSCAN_API_KEY`
+  - `ETHERSCAN_API_KEY` (V2 Multichain API)
 
 **Commands**:
 ```bash
 cd contracts
 npm run compile
 npm run test  # Verify all tests pass
-npm run deploy:mumbai
+npm run deploy:amoy
 ```
 
 **Expected Output**: Contract addresses for all 4 contracts (proxy addresses)
@@ -123,8 +123,8 @@ npm run deploy:mumbai
 **Commands**:
 ```bash
 # Verify each contract (proxy and implementation)
-npx hardhat verify --network mumbai <PROXY_ADDRESS>
-npx hardhat verify --network mumbai <IMPLEMENTATION_ADDRESS> --constructor-args <encoded-args>
+npx hardhat verify --network amoy <PROXY_ADDRESS>
+npx hardhat verify --network amoy <IMPLEMENTATION_ADDRESS> --constructor-args <encoded-args>
 ```
 
 **Alternative**: Manual verification via PolygonScan web interface
@@ -141,7 +141,7 @@ npx hardhat verify --network mumbai <IMPLEMENTATION_ADDRESS> --constructor-args 
 2. Navigate to http://localhost:3000
 3. Click "Connect Wallet"
 4. Test MetaMask connection
-5. Verify network switching to Mumbai
+5. Verify network switching to Amoy
 6. Test wallet disconnection
 
 ## Code Quality Improvements Made
@@ -182,7 +182,7 @@ npx hardhat verify --network mumbai <IMPLEMENTATION_ADDRESS> --constructor-args 
 ## Next Steps
 
 1. **Complete Manual Validation**:
-   - Deploy contracts to Mumbai testnet
+   - Deploy contracts to Amoy testnet
    - Verify contracts on PolygonScan
    - Test frontend wallet connection
 
@@ -209,7 +209,7 @@ npx hardhat verify --network mumbai <IMPLEMENTATION_ADDRESS> --constructor-args 
 - [x] Dependency vulnerability scan completed
 - [x] Frontend dependencies resolved
 - [x] TypeScript compilation passes
-- [ ] Contracts deployed to Mumbai testnet (manual)
+- [ ] Contracts deployed to Amoy testnet (manual)
 - [ ] Contracts verified on PolygonScan (manual)
 - [ ] Frontend wallet connection tested (manual)
 - [ ] Deployment addresses documented (manual)

@@ -6,7 +6,7 @@
 - npm or yarn
 - Git
 - Supabase account
-- Polygon Mumbai testnet MATIC
+- Polygon Amoy testnet MATIC
 - Environment variables configured
 
 ## Deployment Steps
@@ -21,19 +21,20 @@ npm run compile
 npm run test
 ```
 
-#### Deploy to Mumbai Testnet
+#### Deploy to Amoy Testnet
 ```bash
 # Ensure .env is configured with:
-# - POLYGON_MUMBAI_RPC_URL
+# - POLYGON_AMOY_RPC_URL
 # - PRIVATE_KEY (deployer wallet)
-# - POLYGONSCAN_API_KEY
+# - ETHERSCAN_API_KEY (V2 Multichain API key)
 
-npm run deploy:mumbai
+npm run deploy:amoy
 ```
 
 #### Verify Contracts
 ```bash
-npm run verify:mumbai
+# Uses Etherscan V2 Multichain API
+npm run verify:amoy
 ```
 
 #### Deploy to Mainnet (Production)
@@ -80,7 +81,7 @@ npm run build
 #### Environment Variables
 Ensure all required environment variables are set:
 - `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID`
-- `NEXT_PUBLIC_POLYGON_MUMBAI_RPC_URL`
+- `NEXT_PUBLIC_POLYGON_AMOY_RPC_URL` (optional)
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - Contract addresses (after deployment)

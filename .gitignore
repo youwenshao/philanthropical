@@ -23,6 +23,19 @@ out/
 .env
 .env.local
 .env*.local
+*.env
+*.key
+*.pem
+*secret*
+*private*
+
+# API Keys and Secrets
+*api*key*
+*apikey*
+*secret*
+*private*key*
+*PRIVATE_KEY*
+*API_KEY*
 
 # IDE
 .vscode/

@@ -8,9 +8,9 @@ on:
       - 'contracts/**'
 
 env:
-  POLYGON_MUMBAI_RPC_URL: ${{ secrets.POLYGON_MUMBAI_RPC_URL }}
+  POLYGON_AMOY_RPC_URL: ${{ secrets.POLYGON_AMOY_RPC_URL }}
   PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
-  POLYGONSCAN_API_KEY: ${{ secrets.POLYGONSCAN_API_KEY }}
+  ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
 
 jobs:
   deploy:
@@ -39,16 +39,16 @@ jobs:
         working-directory: ./contracts
         run: npm run test
 
-      - name: Deploy to Mumbai
+      - name: Deploy to Amoy
         working-directory: ./contracts
-        run: npm run deploy:mumbai
+        run: npm run deploy:amoy
         env:
-          POLYGON_MUMBAI_RPC_URL: ${{ secrets.POLYGON_MUMBAI_RPC_URL }}
+          POLYGON_AMOY_RPC_URL: ${{ secrets.POLYGON_AMOY_RPC_URL }}
           PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
 
       - name: Verify contracts
         working-directory: ./contracts
-        run: npm run verify:mumbai
+        run: npm run verify:amoy
         env:
-          POLYGONSCAN_API_KEY: ${{ secrets.POLYGONSCAN_API_KEY }}
+          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
 

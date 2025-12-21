@@ -18,8 +18,8 @@ Philanthropical leverages blockchain technology to create a transparent, verifia
 ## Tech Stack
 
 ### Blockchain
-- **Network**: Polygon Mumbai Testnet → Polygon Mainnet
-- **Smart Contracts**: Solidity 0.8.19+ with Hardhat
+- **Network**: Polygon Amoy Testnet → Polygon Mainnet
+- **Smart Contracts**: Solidity 0.8.22 with Hardhat
 - **Libraries**: OpenZeppelin, Chainlink
 
 ### Frontend
@@ -53,7 +53,7 @@ philanthropical/
 - npm or yarn
 - Git
 - Supabase account
-- Polygon Mumbai testnet MATIC
+- Polygon Amoy testnet MATIC
 
 ### Installation
 
@@ -100,7 +100,7 @@ cd contracts
 npm run compile      # Compile contracts
 npm run test        # Run tests
 npm run test:coverage  # Generate coverage report
-npm run deploy:mumbai  # Deploy to Mumbai testnet
+npm run deploy:amoy  # Deploy to Amoy testnet
 ```
 
 ### Frontend
@@ -135,15 +135,15 @@ npm run slither     # Run Slither static analysis
 
 ### Contracts
 
-1. Deploy to Mumbai testnet:
+1. Deploy to Amoy testnet:
 ```bash
 cd contracts
-npm run deploy:mumbai
+npm run deploy:amoy
 ```
 
 2. Verify contracts:
 ```bash
-npm run verify:mumbai
+npm run verify:amoy
 ```
 
 ### Frontend

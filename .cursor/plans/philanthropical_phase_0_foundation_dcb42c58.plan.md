@@ -304,7 +304,3 @@ After Phase 0 completion, validate:
 6. **Monitoring**: Sentry for errors, Tenderly for transaction monitoring
 
 ## Next Steps After Phase 0
-
-Once Phase 0 is validated, proceed to Phase 1:
-
-- Implement complete donation flow (Fiat → USDC → Donation → NFT receipt)

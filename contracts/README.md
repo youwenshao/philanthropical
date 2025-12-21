@@ -36,9 +36,14 @@ npm run test
 npm run test:coverage
 ```
 
-6. Deploy to Mumbai testnet:
+6. Deploy to Amoy testnet:
 ```bash
-npm run deploy:mumbai
+npm run deploy:amoy
+```
+
+7. Verify contracts on Etherscan:
+```bash
+npm run verify:amoy
 ```
 
 ## Security
