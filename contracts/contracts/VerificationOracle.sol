@@ -2,8 +2,8 @@
 pragma solidity ^0.8.19;
 
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
@@ -360,7 +360,7 @@ contract VerificationOracle is
     /**
      * @dev Deposit stake for oracle role
      */
-    function depositStake() external payable whenNotPaused {
+    function depositStake() public payable whenNotPaused {
         require(msg.value >= requiredStake, "VerificationOracle: insufficient stake");
         stakedAmounts[msg.sender] += msg.value;
         emit StakeDeposited(msg.sender, msg.value, block.timestamp);

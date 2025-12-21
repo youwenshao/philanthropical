@@ -188,6 +188,14 @@ describe("ImpactEscrow", function () {
 
   describe("Emergency Withdrawal", function () {
     it("Should request emergency withdrawal", async function () {
+      // First create a project to fund the escrow
+      const totalAmount = ethers.parseEther("10000");
+      await impactEscrow.createProject(
+        charity.address,
+        await mockToken.getAddress(),
+        totalAmount
+      );
+
       const withdrawalAmount = ethers.parseEther("1000");
 
       await expect(

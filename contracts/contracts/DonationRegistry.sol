@@ -4,8 +4,8 @@ pragma solidity ^0.8.19;
 import "@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/common/ERC2981Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
@@ -107,7 +107,7 @@ contract DonationRegistry is
         _grantRole(OPERATOR_ROLE, msg.sender);
         _grantRole(UPGRADER_ROLE, msg.sender);
 
-        _setDefaultRoyalty(_defaultRoyaltyReceiver, _platformFeeBps);
+        _setDefaultRoyalty(_defaultRoyaltyReceiver, uint96(_platformFeeBps));
         platformFeeBps = _platformFeeBps;
 
         // Initialize circuit breakers
@@ -305,9 +305,10 @@ contract DonationRegistry is
         require(newFeeBps <= 1000, "DonationRegistry: fee too high");
         uint256 oldFee = platformFeeBps;
         platformFeeBps = newFeeBps;
+        (address receiver, ) = royaltyInfo(DONATION_TOKEN_ID, 0);
         _setDefaultRoyalty(
-            royaltyInfo(DONATION_TOKEN_ID).receiver,
-            newFeeBps
+            receiver,
+            uint96(newFeeBps)
         );
         emit PlatformFeeUpdated(oldFee, newFeeBps);
     }
