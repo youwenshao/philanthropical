@@ -301,6 +301,3 @@ After Phase 0 completion, validate:
 3. **Frontend State**: Zustand for global state, React Query for server state
 4. **Database**: Supabase PostgreSQL with Row Level Security enabled
 5. **File Storage**: IPFS via Pinata (Arweave integration in Phase 2)
-6. **Monitoring**: Sentry for errors, Tenderly for transaction monitoring
-
-## Next Steps After Phase 0
