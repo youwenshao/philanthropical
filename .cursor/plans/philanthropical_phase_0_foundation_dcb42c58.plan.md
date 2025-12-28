@@ -300,4 +300,3 @@ After Phase 0 completion, validate:
 2. **Testing Framework**: Hardhat + Chai + ethers.js for contract tests
 3. **Frontend State**: Zustand for global state, React Query for server state
 4. **Database**: Supabase PostgreSQL with Row Level Security enabled
-5. **File Storage**: IPFS via Pinata (Arweave integration in Phase 2)

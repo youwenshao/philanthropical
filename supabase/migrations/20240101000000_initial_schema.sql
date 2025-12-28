@@ -1,5 +1,4 @@
 -- Enable necessary extensions
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
 -- Users table (extends Supabase auth.users)
@@ -12,7 +11,7 @@ CREATE TABLE IF NOT EXISTS public.users (
 
 -- Charities table
 CREATE TABLE IF NOT EXISTS public.charities (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     address TEXT UNIQUE NOT NULL,
     name TEXT NOT NULL,
     description TEXT,
@@ -27,7 +26,7 @@ CREATE TABLE IF NOT EXISTS public.charities (
 
 -- Donation events table
 CREATE TABLE IF NOT EXISTS public.donation_events (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     donation_id BIGINT NOT NULL,
     donor_address TEXT NOT NULL,
     charity_address TEXT NOT NULL REFERENCES public.charities(address),
@@ -37,15 +36,17 @@ CREATE TABLE IF NOT EXISTS public.donation_events (
     transaction_hash TEXT UNIQUE NOT NULL,
     block_number BIGINT NOT NULL,
     processed BOOLEAN DEFAULT FALSE,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    INDEX idx_donation_events_donor (donor_address),
-    INDEX idx_donation_events_charity (charity_address),
-    INDEX idx_donation_events_created (created_at)
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- Indexes for donation_events
+CREATE INDEX IF NOT EXISTS idx_donation_events_donor ON public.donation_events(donor_address);
+CREATE INDEX IF NOT EXISTS idx_donation_events_charity ON public.donation_events(charity_address);
+CREATE INDEX IF NOT EXISTS idx_donation_events_created ON public.donation_events(created_at);
 
 -- Verification submissions table
 CREATE TABLE IF NOT EXISTS public.verification_submissions (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     verification_id BIGINT NOT NULL,
     charity_address TEXT NOT NULL REFERENCES public.charities(address),
     project_id BIGINT,
@@ -55,14 +56,16 @@ CREATE TABLE IF NOT EXISTS public.verification_submissions (
     submitted_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     verified_at TIMESTAMP WITH TIME ZONE,
     verified_by TEXT,
-    disputed BOOLEAN DEFAULT FALSE,
-    INDEX idx_verification_submissions_charity (charity_address),
-    INDEX idx_verification_submissions_created (submitted_at)
+    disputed BOOLEAN DEFAULT FALSE
 );
+
+-- Indexes for verification_submissions
+CREATE INDEX IF NOT EXISTS idx_verification_submissions_charity ON public.verification_submissions(charity_address);
+CREATE INDEX IF NOT EXISTS idx_verification_submissions_created ON public.verification_submissions(submitted_at);
 
 -- Fraud alerts table
 CREATE TABLE IF NOT EXISTS public.fraud_alerts (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     alert_type TEXT NOT NULL,
     charity_address TEXT REFERENCES public.charities(address),
     donation_id BIGINT,
@@ -71,27 +74,31 @@ CREATE TABLE IF NOT EXISTS public.fraud_alerts (
     resolved BOOLEAN DEFAULT FALSE,
     resolved_at TIMESTAMP WITH TIME ZONE,
     resolved_by UUID REFERENCES auth.users(id),
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    INDEX idx_fraud_alerts_charity (charity_address),
-    INDEX idx_fraud_alerts_resolved (resolved, created_at)
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- Indexes for fraud_alerts
+CREATE INDEX IF NOT EXISTS idx_fraud_alerts_charity ON public.fraud_alerts(charity_address);
+CREATE INDEX IF NOT EXISTS idx_fraud_alerts_resolved ON public.fraud_alerts(resolved, created_at);
 
 -- Projects table (for escrow)
 CREATE TABLE IF NOT EXISTS public.projects (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     project_id BIGINT UNIQUE NOT NULL,
     charity_address TEXT NOT NULL REFERENCES public.charities(address),
     token_address TEXT NOT NULL,
     total_amount DECIMAL(78, 0) NOT NULL,
     released_amount DECIMAL(78, 0) DEFAULT 0,
     active BOOLEAN DEFAULT TRUE,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    INDEX idx_projects_charity (charity_address)
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- Indexes for projects
+CREATE INDEX IF NOT EXISTS idx_projects_charity ON public.projects(charity_address);
 
 -- Milestones table
 CREATE TABLE IF NOT EXISTS public.milestones (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     project_id BIGINT NOT NULL REFERENCES public.projects(project_id),
     milestone_id BIGINT NOT NULL,
     description TEXT NOT NULL,
@@ -99,9 +106,11 @@ CREATE TABLE IF NOT EXISTS public.milestones (
     status TEXT DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'completed', 'rejected')),
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     completed_at TIMESTAMP WITH TIME ZONE,
-    UNIQUE(project_id, milestone_id),
-    INDEX idx_milestones_project (project_id)
+    UNIQUE(project_id, milestone_id)
 );
+
+-- Indexes for milestones
+CREATE INDEX IF NOT EXISTS idx_milestones_project ON public.milestones(project_id);
 
 -- Row Level Security Policies
 

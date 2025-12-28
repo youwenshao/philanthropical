@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Philanthropical",
+    "slug": "philanthropical",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.philanthropical.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to your camera to capture impact verification photos.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location to tag verification photos with geolocation data."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.philanthropical.app",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Philanthropical to access your camera to take impact verification photos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Philanthropical to access your location to tag verification photos."
+        }
+      ]
+    ],
+    "scheme": "philanthropical"
+  }
+}
