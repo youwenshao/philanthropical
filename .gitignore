@@ -59,3 +59,49 @@ typechain-types/
 .branches
 .temp
 
+# Cursor IDE
+.cursor/plans/
+
+# Coverage reports
+coverage/
+*.lcov
+coverage.json
+coverage-final.json
+lcov.info
+lcov-report/
+
+# Build artifacts
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+.next/
+out/
+dist/
+build/
+
+# OpenZeppelin upgradeable contracts
+.openzeppelin/
+
+# Test artifacts
+.nyc_output/
+.jest/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+

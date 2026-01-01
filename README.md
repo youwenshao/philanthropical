@@ -8,12 +8,21 @@ Philanthropical leverages blockchain technology to create a transparent, verifia
 
 ## Features
 
+### Core Features
 - **Transparent Donations**: All donations are recorded on-chain with NFT receipts
-- **Charity Verification**: Multi-sig approval system for charity onboarding
+- **Charity Verification**: Multi-sig approval system for charity onboarding with three-tier verification (Charity, Crowdsourced, Professional)
 - **Impact Escrow**: Milestone-based fund release with multi-sig control
 - **Verification Oracle**: Chainlink-integrated impact verification system
-- **Fraud Detection**: Multi-layer fraud detection engine
-- **Cross-Border Payments**: Efficient crypto-based cross-border transfers
+- **Fraud Detection**: Multi-layer fraud detection engine with ML-based anomaly detection
+- **Cross-Border Payments**: Efficient crypto-based cross-border transfers via USDC on Polygon
+
+### Advanced Features (Phase 3)
+- **Analytics Dashboard**: Real-time metrics, interactive charts, and data export functionality
+- **Performance Optimizations**: Image optimization, code splitting, service worker for offline support, and database materialized views
+- **Monitoring & Observability**: Sentry error tracking, performance monitoring, custom analytics, and health check endpoints
+- **Mobile App**: Expo React Native app with offline mode, push notifications, camera integration, and geolocation capture
+- **API Enhancements**: API versioning, batch endpoints, response caching, and comprehensive API documentation
+- **Production Readiness**: Incident response procedures, automated backups, security hardening, and comprehensive monitoring
 
 ## Tech Stack
 
@@ -29,20 +38,23 @@ Philanthropical leverages blockchain technology to create a transparent, verifia
 - **State**: Zustand
 
 ### Backend
-- **Database**: Supabase (PostgreSQL) with Row Level Security
+- **Database**: Supabase (PostgreSQL) with Row Level Security, materialized views, and optimized indexes
 - **File Storage**: IPFS via Pinata
-- **APIs**: Next.js API Routes
+- **APIs**: Next.js API Routes with versioning, caching, and batch operations
+- **Monitoring**: Sentry for error tracking, custom analytics, and performance monitoring
+- **Indexer**: Blockchain event indexer for real-time data synchronization
 
 ## Project Structure
 
 ```
 philanthropical/
 ├── contracts/          # Smart contracts (Hardhat)
-├── frontend/           # Next.js application
-├── mobile/             # Expo React Native app (future)
+├── frontend/           # Next.js application with analytics dashboard
+├── mobile/             # Expo React Native app for impact verification
 ├── indexer/            # Blockchain event indexer
-├── supabase/           # Database migrations
-└── docs/               # Documentation
+├── fraud-detection/    # Fraud detection engine with ML models
+├── supabase/           # Database migrations and functions
+└── docs/               # Comprehensive documentation
 ```
 
 ## Getting Started
@@ -162,6 +174,26 @@ npm run build
 - Contracts are upgradeable using Transparent Proxy pattern
 - Comprehensive test coverage (>90%)
 - Regular security audits with Slither and MythX
+- Rate limiting on all API endpoints
+- CORS protection and security headers
+- Incident response procedures and monitoring
+
+## Performance
+
+- **Frontend**: Image optimization, code splitting, service worker for offline support
+- **Database**: Materialized views for complex queries, strategic indexes, connection pooling
+- **API**: Response caching, compression, batch operations
+- **Target Metrics**: Page load < 2s, API response < 200ms, Database query < 100ms
+
+## Monitoring
+
+- **Error Tracking**: Sentry integration for real-time error monitoring
+- **Performance**: Core Web Vitals tracking and API response time monitoring
+- **Analytics**: Custom analytics dashboard with real-time metrics
+- **Health Checks**: Automated health check endpoints for all services
+- **Alerts**: Configurable alerting for critical issues
+
+See [MONITORING.md](docs/MONITORING.md) and [PERFORMANCE_TUNING.md](docs/PERFORMANCE_TUNING.md) for detailed information.
 
 ## Contributing
 
