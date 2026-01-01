@@ -43,7 +43,7 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
-          file: ./contracts/coverage/coverage.json
+          file: ./contracts/coverage/lcov.info
           flags: contracts
           name: contracts-coverage
 
