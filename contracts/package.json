@@ -1,7 +1,7 @@
 {
   "name": "philanthropical-contracts",
   "version": "0.1.0",
-  "description": "Smart contracts for Philanthropical charity platform",
+  "description": "Smart contracts for Philanthropical charity platform - HKUST 2026 Hong Kong Web3 Ideathon (Category 3: Safeguarding Against Financial Scams and Frauds) - Team AIInFin",
   "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",

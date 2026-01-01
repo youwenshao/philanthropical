@@ -2,6 +2,10 @@
 
 Smart contracts for the Philanthropical blockchain-based transparent charity platform.
 
+> **HKUST 2026 Hong Kong Web3 Ideathon**  
+> **Category 3: Safeguarding Against Financial Scams and Frauds**  
+> **Team: AIInFin | Members: Serena & Youwen**
+
 ## Contracts
 
 - **DonationRegistry.sol**: ERC-1155 based donation registry with NFT receipts

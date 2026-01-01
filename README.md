@@ -2,6 +2,10 @@
 
 A blockchain-based transparent charity platform designed to reduce fraud in cross-border donations.
 
+> **HKUST 2026 Hong Kong Web3 Ideathon**  
+> **Category 3: Safeguarding Against Financial Scams and Frauds**  
+> **Team: AIInFin | Members: Serena & Youwen**
+
 ## Overview
 
 Philanthropical leverages blockchain technology to create a transparent, verifiable, and efficient charity platform. By using smart contracts, we ensure that donations are tracked, verified, and distributed with full transparency while reducing fraud and operational costs.
@@ -198,6 +202,17 @@ See [MONITORING.md](docs/MONITORING.md) and [PERFORMANCE_TUNING.md](docs/PERFORM
 ## Contributing
 
 See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for development guidelines.
+
+## Competition
+
+This project is developed for the **HKUST 2026 Hong Kong Web3 Ideathon** under **Category 3: Safeguarding Against Financial Scams and Frauds**.
+
+**Team Information:**
+- **Team Name**: AIInFin
+- **Team Members**: Serena & Youwen
+- **Category**: Safeguarding Against Financial Scams and Frauds
+
+Philanthropical addresses the competition theme by providing a transparent, blockchain-based platform that uses smart contracts, multi-tier verification systems, and ML-based fraud detection to prevent financial scams in cross-border charitable donations.
 
 ## License
 

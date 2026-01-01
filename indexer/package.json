@@ -1,7 +1,7 @@
 {
   "name": "philanthropical-indexer",
   "version": "0.1.0",
-  "description": "Blockchain event indexer for Philanthropical",
+  "description": "Blockchain event indexer for Philanthropical - HKUST 2026 Hong Kong Web3 Ideathon (Category 3: Safeguarding Against Financial Scams and Frauds) - Team AIInFin",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

@@ -1,8 +1,12 @@
 # Philanthropical Architecture
 
+> **HKUST 2026 Hong Kong Web3 Ideathon**  
+> **Category 3: Safeguarding Against Financial Scams and Frauds**  
+> **Team: AIInFin | Members: Serena & Youwen**
+
 ## System Overview
 
-Philanthropical is a blockchain-based charity platform that ensures transparency and reduces fraud in cross-border donations. The system consists of multiple layers working together to provide a secure, verifiable, and efficient donation ecosystem.
+Philanthropical is a blockchain-based charity platform that ensures transparency and reduces fraud in cross-border donations. The system consists of multiple layers working together to provide a secure, verifiable, and efficient donation ecosystem. This project addresses the competition theme by leveraging blockchain technology, smart contracts, and ML-based fraud detection to safeguard against financial scams in charitable giving.
 
 ## Architecture Diagram
 
