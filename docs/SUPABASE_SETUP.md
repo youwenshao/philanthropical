@@ -234,3 +234,5 @@ If you encounter issues:
 3. Consult the [Supabase Discord](https://discord.supabase.com)
 4. Open a GitHub issue with error details
 
+
+

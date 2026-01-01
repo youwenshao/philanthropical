@@ -23,7 +23,7 @@ interface CharitySelectorProps {
 }
 
 export function CharitySelector({ selectedCharity, onSelect }: CharitySelectorProps) {
-  const { charities, isLoading, error } = useCharities();
+  const { data: charities, isLoading, error } = useCharities();
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -74,7 +74,7 @@ export function CharitySelector({ selectedCharity, onSelect }: CharitySelectorPr
   }
 
   // Filter to only show approved charities
-  const approvedCharities = charities?.filter((c) => c.verificationStatus === "approved") || [];
+  const approvedCharities = charities?.filter((c: Charity) => c.verificationStatus === "approved") || [];
 
   if (approvedCharities.length === 0) {
     return (
@@ -90,7 +90,7 @@ export function CharitySelector({ selectedCharity, onSelect }: CharitySelectorPr
     <div className="space-y-4">
       <h3 className="text-lg font-semibold">Select a Charity</h3>
       <div className="grid gap-4 md:grid-cols-2">
-        {approvedCharities.map((charity) => (
+        {approvedCharities.map((charity: Charity) => (
           <Card
             key={charity.address}
             className={`cursor-pointer transition-all ${

@@ -1,0 +1,39 @@
+{
+  "name": "philanthropical-fraud-detection",
+  "version": "0.1.0",
+  "description": "Fraud detection service for Philanthropical",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "ts-node-dev --respawn src/index.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "fraud-detection",
+    "blockchain",
+    "charity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "sharp": "^0.33.0",
+    "exifr": "^7.1.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.10.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.0"
+  }
+}
+
+

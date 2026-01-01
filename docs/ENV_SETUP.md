@@ -202,3 +202,5 @@ After configuring environment variables:
 4. ✅ Test frontend connection
 5. ✅ Start the indexer service
 
+
+

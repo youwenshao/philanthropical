@@ -96,3 +96,5 @@ export function CharityTable({ charities }: CharityTableProps) {
   );
 }
 
+
+

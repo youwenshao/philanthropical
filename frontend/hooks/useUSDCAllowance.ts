@@ -24,7 +24,7 @@ export function useUSDCAllowance(spender: Address) {
   });
 
   const hasSufficientAllowance = (requiredAmount: bigint): boolean => {
-    if (!allowance) return false;
+    if (!allowance || typeof allowance !== 'bigint') return false;
     return allowance >= requiredAmount;
   };
 

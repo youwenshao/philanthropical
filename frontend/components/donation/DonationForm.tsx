@@ -62,7 +62,7 @@ export function DonationForm() {
   };
 
   const amountBigInt = amount ? parseUnits(amount, decimals) : 0n;
-  const insufficientBalance = balance && amountBigInt > balance;
+  const insufficientBalance: boolean = balance !== undefined && typeof balance === 'bigint' && amountBigInt > balance;
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -190,8 +190,10 @@ export function DonationForm() {
                 <Alert>
                   <AlertCircle className="h-4 w-4" />
                   <AlertDescription>
-                    Insufficient balance. You need {amount} USDC but only have{" "}
-                    {formattedBalance} USDC.
+                    <span>
+                      Insufficient balance. You need {String(amount)} USDC but only have{" "}
+                      {String(formattedBalance)} USDC.
+                    </span>
                     <Button
                       variant="link"
                       className="p-0 ml-2"

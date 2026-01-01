@@ -24,6 +24,13 @@ contract VerificationOracle is
     bytes32 public constant ORACLE_ROLE = keccak256("ORACLE_ROLE");
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
+    // Verification tier enum
+    enum VerificationTier {
+        Tier1, // Crowdsourced
+        Tier2, // Professional
+        Tier3  // Automated/ML
+    }
+
     // Verification status
     enum VerificationResult {
         Pending,
@@ -39,11 +46,13 @@ contract VerificationOracle is
         uint256 projectId;
         string evidenceHash; // IPFS hash
         VerificationResult result;
+        VerificationTier tier;
         uint256 submittedAt;
         uint256 verifiedAt;
         address verifiedBy;
         uint256 stakeAmount;
         bool disputed;
+        mapping(VerificationTier => VerificationResult) tierResults; // Results from each tier
     }
 
     // Dispute structure
@@ -66,6 +75,7 @@ contract VerificationOracle is
     mapping(address => uint256) public falseVerificationCount;
     mapping(address => uint256) public stakedAmounts;
     mapping(address => AggregatorV3Interface) public priceFeeds; // Token => Price Feed
+    mapping(uint256 => mapping(VerificationTier => VerificationResult)) public tierResults; // verificationId => tier => result
 
     uint256 public verificationCounter;
     uint256 public disputeCounter;
@@ -166,29 +176,36 @@ contract VerificationOracle is
      * @param charity Address of the charity
      * @param projectId Project ID
      * @param evidenceHash IPFS hash of evidence
+     * @param tier Verification tier
      */
     function submitVerification(
         address charity,
         uint256 projectId,
-        string memory evidenceHash
+        string memory evidenceHash,
+        VerificationTier tier
     ) external whenNotPaused nonReentrant returns (uint256 verificationId) {
         require(charity != address(0), "VerificationOracle: invalid charity");
         require(bytes(evidenceHash).length > 0, "VerificationOracle: empty hash");
 
         verificationId = ++verificationCounter;
 
-        verifications[verificationId] = ImpactVerification({
-            verificationId: verificationId,
-            charity: charity,
-            projectId: projectId,
-            evidenceHash: evidenceHash,
-            result: VerificationResult.Pending,
-            submittedAt: block.timestamp,
-            verifiedAt: 0,
-            verifiedBy: address(0),
-            stakeAmount: 0,
-            disputed: false
-        });
+        ImpactVerification storage verification = verifications[verificationId];
+        verification.verificationId = verificationId;
+        verification.charity = charity;
+        verification.projectId = projectId;
+        verification.evidenceHash = evidenceHash;
+        verification.result = VerificationResult.Pending;
+        verification.tier = tier;
+        verification.submittedAt = block.timestamp;
+        verification.verifiedAt = 0;
+        verification.verifiedBy = address(0);
+        verification.stakeAmount = 0;
+        verification.disputed = false;
+
+        // Initialize tier results
+        tierResults[verificationId][VerificationTier.Tier1] = VerificationResult.Pending;
+        tierResults[verificationId][VerificationTier.Tier2] = VerificationResult.Pending;
+        tierResults[verificationId][VerificationTier.Tier3] = VerificationResult.Pending;
 
         emit VerificationSubmitted(
             verificationId,
@@ -199,6 +216,47 @@ contract VerificationOracle is
         );
 
         return verificationId;
+    }
+
+    /**
+     * @dev Update tier result (called by tier contracts)
+     * @param verificationId The verification ID
+     * @param tier The verification tier
+     * @param result The verification result
+     */
+    function updateTierResult(
+        uint256 verificationId,
+        VerificationTier tier,
+        VerificationResult result
+    ) external onlyRole(ORACLE_ROLE) whenNotPaused {
+        ImpactVerification storage verification = verifications[verificationId];
+        require(
+            verification.verificationId != 0,
+            "VerificationOracle: verification not found"
+        );
+
+        tierResults[verificationId][tier] = result;
+
+        // Update overall result based on tier precedence (Tier 3 > Tier 2 > Tier 1)
+        if (tier == VerificationTier.Tier3 && result != VerificationResult.Pending) {
+            verification.result = result;
+            verification.verifiedAt = block.timestamp;
+        } else if (
+            tier == VerificationTier.Tier2 &&
+            result != VerificationResult.Pending &&
+            tierResults[verificationId][VerificationTier.Tier3] == VerificationResult.Pending
+        ) {
+            verification.result = result;
+            verification.verifiedAt = block.timestamp;
+        } else if (
+            tier == VerificationTier.Tier1 &&
+            result != VerificationResult.Pending &&
+            tierResults[verificationId][VerificationTier.Tier2] == VerificationResult.Pending &&
+            tierResults[verificationId][VerificationTier.Tier3] == VerificationResult.Pending
+        ) {
+            verification.result = result;
+            verification.verifiedAt = block.timestamp;
+        }
     }
 
     /**
@@ -389,11 +447,47 @@ contract VerificationOracle is
 
     /**
      * @dev Get verification information
+     * Note: This returns a struct without the nested mapping
      */
     function getVerification(
         uint256 verificationId
-    ) external view returns (ImpactVerification memory) {
-        return verifications[verificationId];
+    ) external view returns (
+        uint256 verificationId_,
+        address charity,
+        uint256 projectId,
+        string memory evidenceHash,
+        VerificationResult result,
+        VerificationTier tier,
+        uint256 submittedAt,
+        uint256 verifiedAt,
+        address verifiedBy,
+        uint256 stakeAmount,
+        bool disputed
+    ) {
+        ImpactVerification storage v = verifications[verificationId];
+        return (
+            v.verificationId,
+            v.charity,
+            v.projectId,
+            v.evidenceHash,
+            v.result,
+            v.tier,
+            v.submittedAt,
+            v.verifiedAt,
+            v.verifiedBy,
+            v.stakeAmount,
+            v.disputed
+        );
+    }
+
+    /**
+     * @dev Get tier result for a verification
+     */
+    function getTierResult(
+        uint256 verificationId,
+        VerificationTier tier
+    ) external view returns (VerificationResult) {
+        return tierResults[verificationId][tier];
     }
 
     /**

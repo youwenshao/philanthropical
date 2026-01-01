@@ -6,7 +6,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Wallet } from "lucide-react";
 
 export function USDCBalance() {
-  const { formattedBalance, balance, isLoading } = useUSDC();
+  const { formattedBalance, balance } = useUSDC();
+  const isLoading = balance === undefined;
 
   if (isLoading) {
     return (
@@ -44,4 +45,6 @@ export function USDCBalance() {
     </Card>
   );
 }
+
+
 

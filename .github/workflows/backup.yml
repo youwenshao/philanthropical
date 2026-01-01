@@ -1,0 +1,49 @@
+name: Database Backup
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: "0 2 * * *"
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create backup
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          # Create backup directory
+          mkdir -p backups
+          
+          # Export database (using Supabase CLI or pg_dump)
+          # This is a placeholder - actual implementation depends on backup method
+          echo "Backup would be created here"
+          
+          # Upload to storage (S3, GCS, etc.)
+          # This is a placeholder
+          echo "Backup would be uploaded here"
+
+      - name: Verify backup
+        run: |
+          # Verify backup integrity
+          echo "Backup verification would happen here"
+
+      - name: Cleanup old backups
+        run: |
+          # Keep only last 30 days of backups
+          echo "Old backup cleanup would happen here"
+

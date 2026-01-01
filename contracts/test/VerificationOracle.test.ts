@@ -43,7 +43,8 @@ describe("VerificationOracle", function () {
         verificationOracle.submitVerification(
           charity.address,
           1,
-          "QmHash123"
+          "QmHash123",
+          2 // VerificationTier.Tier3
         )
       )
         .to.emit(verificationOracle, "VerificationSubmitted")
@@ -94,7 +95,8 @@ describe("VerificationOracle", function () {
       await verificationOracle.submitVerification(
         charity.address,
         1,
-        "QmHash123"
+        "QmHash123",
+        2 // VerificationTier.Tier3
       );
     });
 
@@ -135,7 +137,8 @@ describe("VerificationOracle", function () {
       await verificationOracle.submitVerification(
         charity.address,
         1,
-        "QmHash123"
+        "QmHash123",
+        2 // VerificationTier.Tier3
       );
       await verificationOracle.connect(oracle).verifyImpact(1, 1); // Verified
     });
@@ -166,7 +169,8 @@ describe("VerificationOracle", function () {
       await verificationOracle.submitVerification(
         charity.address,
         1,
-        "QmHash123"
+        "QmHash123",
+        2 // VerificationTier.Tier3
       );
       await verificationOracle.connect(oracle).verifyImpact(1, 1);
       await verificationOracle.connect(disputer).createDispute(1, "False verification");

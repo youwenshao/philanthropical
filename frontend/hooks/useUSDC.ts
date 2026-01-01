@@ -64,7 +64,7 @@ export function useUSDC() {
 
   // Check if user has sufficient balance
   const hasSufficientBalance = (requiredAmount: bigint): boolean => {
-    if (!balance) return false;
+    if (!balance || typeof balance !== 'bigint') return false;
     return balance >= requiredAmount;
   };
 
@@ -77,7 +77,7 @@ export function useUSDC() {
 
   // Format balance for display
   const formattedBalance = useMemo(() => {
-    if (!balance || !decimals) return "0.00";
+    if (!balance || !decimals || typeof balance !== 'bigint') return "0.00";
     return formatUSDC(balance, Number(decimals));
   }, [balance, decimals]);
 

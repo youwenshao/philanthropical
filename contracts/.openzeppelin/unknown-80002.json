@@ -20,6 +20,101 @@
       "address": "0xbB87A71028EaED5DC382DD1b95e5DACAc7F73fFb",
       "txHash": "0xc1b77983d894433946261fe586510efdac1069997f37e1edb1ab8e3a6b42d298",
       "kind": "uups"
+    },
+    {
+      "address": "0xa2f1Fb8bf6BF64bC1ba71f94b16C6961b290923a",
+      "txHash": "0x90672620e2a41b0db24b32752ed7dfa56369360d867e597b0d36be9349ed1974",
+      "kind": "uups"
+    },
+    {
+      "address": "0xaa37d3C36e7b55E80D99429B44Ac523a25f8BE02",
+      "txHash": "0xeee6a5fd97fc1db7f878f1a6ab5c2ede2f9a31f252b48f7b7012c0670194d237",
+      "kind": "uups"
+    },
+    {
+      "address": "0x560Bc15F90997ABc7BFEda4799c345Ef2c32c4Be",
+      "txHash": "0x698e7f8c878b5ee3e3c50dddb15fb64a3027b597463125bfdedf1b1769c9933e",
+      "kind": "uups"
+    },
+    {
+      "address": "0x69EA236a95934A7d57dCb690Faae12D32FC1f0E3",
+      "txHash": "0xa336a3d999fe73d0db4b37fb5a6bcfcbcb8632d13dae45727741392c742ae65b",
+      "kind": "uups"
+    },
+    {
+      "address": "0x7d20B63DBA66f888Ff1Bd66bD7A444431fEA7f1f",
+      "txHash": "0x6af367c5bbc58942c636ca938c6ccc64dfc31a79570bbeb9b0806bb53ef89e21",
+      "kind": "uups"
+    },
+    {
+      "address": "0x14f299B54238e82208585FA94205a7c6cdC5849D",
+      "txHash": "0x7c7f032ea09bba39dff020f43e89e5e0d0517097f361538461ba5f6b7123c7ec",
+      "kind": "uups"
+    },
+    {
+      "address": "0x7226b46568Da510C4CE97602F06e52f0E8347356",
+      "txHash": "0xe1632cde42b803a5dcb477bc2898e41a95068a81cc3200cc095383ea75fc154d",
+      "kind": "uups"
+    },
+    {
+      "address": "0xF49554f30B7DAfc2Fb335B659f4f3d23B76C9e7D",
+      "txHash": "0x946cec4211fbd81ba0cc2767a904dbc99c31465b3ec1c7c8e4a5f2887e6a28d6",
+      "kind": "uups"
+    },
+    {
+      "address": "0x05D8e83ef5f45414a116C7285b1723D8bcca0752",
+      "txHash": "0x8a0c4f0637a459aff56b7e935caefb6b4362d7e4e76d4c048a180e82c4caeafa",
+      "kind": "uups"
+    },
+    {
+      "address": "0x5f6A80c780eD1779CcB60e858029d9d2Da53b9C9",
+      "txHash": "0x80b830d372344242637a0956a51cd17d5e757117b32e0788ff431819e70a8128",
+      "kind": "uups"
+    },
+    {
+      "address": "0xdcD5e87693929f4c14B7035676eb8A51FaF809B9",
+      "txHash": "0x52c3736f95b3832ced093422918d97b513766f828e9e51df79a65a3d9d8040d4",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2d7dae5d8427B6ce62ABBB1461aF1b95bc514a6A",
+      "txHash": "0x98c4397c89497bd747120e4ac1207b2a64938983eb1a3eec9ca83574e76470be",
+      "kind": "uups"
+    },
+    {
+      "address": "0x96A919f483DE0b3cAc93c2d6568fBe3B99E8c9f1",
+      "txHash": "0xf83a3bd669fa15d38bab024793e3a91e9c77bdac5a87626a52113c9c2d71538b",
+      "kind": "uups"
+    },
+    {
+      "address": "0x7e400CcBf48015cBdb57Bfa3aB54982ce4B9C712",
+      "txHash": "0x65fa8fb305203a0deb8a5803fa19c38fd5df145887066b60b325da139d68d028",
+      "kind": "uups"
+    },
+    {
+      "address": "0xBE893f0B7Abd255C5879112b982c0eC4b1b6cE6f",
+      "txHash": "0x8547258d4ee7c866e3b93763d2efe70abeb800fb44946884e3690072c8ab4250",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2Ba9E9c9B061ce428f02A8b53723a11B068fc4A2",
+      "txHash": "0x47767034b9d21dfaddb80fcffc703d2f64f39831766b4973c7b6e7ca386c33f6",
+      "kind": "uups"
+    },
+    {
+      "address": "0x01F6Fca11D823aCb81bAA70918f88D373743b7F5",
+      "txHash": "0xde1e1d0bcdc9eea1878dde4486d72901fe6f492b94d5c257f2504647542c0286",
+      "kind": "uups"
+    },
+    {
+      "address": "0xC921eF5Fb2FC2063D28A5B02920F77aB245040B4",
+      "txHash": "0xaf6932c13630fb76850e6f6e7210d5c226b3fde2316f37509e597e3d2453616a",
+      "kind": "uups"
+    },
+    {
+      "address": "0x48EBba532818Cb6Ed09EE6442C0fE430882f8c49",
+      "txHash": "0xa24bb71bfbdad409909532d83226bcf53822f7de4782eceb5d5f5db027f09acd",
+      "kind": "uups"
     }
   ],
   "impls": {
@@ -1606,6 +1701,1620 @@
               "contract": "AccessControlUpgradeable",
               "label": "_roles",
               "type": "t_mapping(t_bytes32,t_struct(RoleData)72_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:62",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "95d2a69676ad85833578a9a268e41c36787798a4d39c9e1ceebe407ba6293892": {
+      "address": "0x9722888A06668B9d2b171d453B5E455a22F49FaE",
+      "txHash": "0x5a9e7b48a5e55c20da27c5d50626256a547fb518f95adeb8c7186270a470c508",
+      "layout": {
+        "solcVersion": "0.8.22",
+        "storage": [
+          {
+            "label": "requiredApprovals",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:51"
+          },
+          {
+            "label": "challengePeriodDuration",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:52"
+          },
+          {
+            "label": "charities",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_struct(Charity)2137_storage)",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:64"
+          },
+          {
+            "label": "verifierApprovals",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:65"
+          },
+          {
+            "label": "approvalCounts",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:66"
+          },
+          {
+            "label": "charityVerifiers",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_address,t_array(t_address)dyn_storage)",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:67"
+          },
+          {
+            "label": "reputationHistory",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:68"
+          },
+          {
+            "label": "fraudReports",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:69"
+          },
+          {
+            "label": "professionalVerifiers",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_address,t_struct(ProfessionalVerifier)2152_storage)",
+            "contract": "CharityVerification",
+            "src": "contracts/CharityVerification.sol:70"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)72_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AccessControlStorage)82_storage": {
+            "label": "struct AccessControlUpgradeable.AccessControlStorage",
+            "members": [
+              {
+                "label": "_roles",
+                "type": "t_mapping(t_bytes32,t_struct(RoleData)72_storage)",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(InitializableStorage)193_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(PausableStorage)344_storage": {
+            "label": "struct PausableUpgradeable.PausableStorage",
+            "members": [
+              {
+                "label": "_paused",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)408_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoleData)72_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "hasRole",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(VerificationStatus)2115": {
+            "label": "enum CharityVerification.VerificationStatus",
+            "members": [
+              "Pending",
+              "Approved",
+              "Rejected",
+              "Challenged",
+              "Suspended"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_address)dyn_storage)": {
+            "label": "mapping(address => address[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(Charity)2137_storage)": {
+            "label": "mapping(address => struct CharityVerification.Charity)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(ProfessionalVerifier)2152_storage)": {
+            "label": "mapping(address => struct CharityVerification.ProfessionalVerifier)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Charity)2137_storage": {
+            "label": "struct CharityVerification.Charity",
+            "members": [
+              {
+                "label": "charityAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "registrationNumber",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "reputationScore",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(VerificationStatus)2115",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "verifiedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "verifiedBy",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "challengePeriodEnd",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              }
+            ],
+            "numberOfBytes": "320"
+          },
+          "t_struct(ProfessionalVerifier)2152_storage": {
+            "label": "struct CharityVerification.ProfessionalVerifier",
+            "members": [
+              {
+                "label": "verifierAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "organizationName",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "accreditationNumber",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "active",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "registeredAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Pausable": [
+            {
+              "contract": "PausableUpgradeable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol:21",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.AccessControl": [
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "_roles",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)72_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:62",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "4b9c4944ea47600e8765fc0c1dac73592df238a0f6fbf8bbaae62408461a7da9": {
+      "address": "0x97fB64F2E9477cFf751b94b808C1328Dc89082EA",
+      "txHash": "0xb57cb9359f9c5c4a4796a8615d4812f52472064eae87fce5d931fcc62e5d66ed",
+      "layout": {
+        "solcVersion": "0.8.22",
+        "storage": [
+          {
+            "label": "verifications",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_uint256,t_struct(ImpactVerification)5444_storage)",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:72"
+          },
+          {
+            "label": "disputes",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_struct(Dispute)5463_storage)",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:73"
+          },
+          {
+            "label": "oracleReputation",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:74"
+          },
+          {
+            "label": "falseVerificationCount",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:75"
+          },
+          {
+            "label": "stakedAmounts",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:76"
+          },
+          {
+            "label": "priceFeeds",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_address,t_contract(AggregatorV3Interface)45)",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:77"
+          },
+          {
+            "label": "tierResults",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_mapping(t_enum(VerificationTier)5408,t_enum(VerificationResult)5413))",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:78"
+          },
+          {
+            "label": "verificationCounter",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_uint256",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:80"
+          },
+          {
+            "label": "disputeCounter",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_uint256",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:81"
+          },
+          {
+            "label": "requiredStake",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_uint256",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:82"
+          },
+          {
+            "label": "disputePeriod",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_uint256",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:83"
+          },
+          {
+            "label": "penaltyPercentage",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_uint256",
+            "contract": "VerificationOracle",
+            "src": "contracts/VerificationOracle.sol:84"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)72_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AccessControlStorage)82_storage": {
+            "label": "struct AccessControlUpgradeable.AccessControlStorage",
+            "members": [
+              {
+                "label": "_roles",
+                "type": "t_mapping(t_bytes32,t_struct(RoleData)72_storage)",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(InitializableStorage)193_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(PausableStorage)344_storage": {
+            "label": "struct PausableUpgradeable.PausableStorage",
+            "members": [
+              {
+                "label": "_paused",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)408_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoleData)72_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "hasRole",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_enum(VerificationResult)5413": {
+            "label": "enum VerificationOracle.VerificationResult",
+            "members": [
+              "Pending",
+              "Verified",
+              "Rejected",
+              "Disputed"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_enum(VerificationTier)5408": {
+            "label": "enum VerificationOracle.VerificationTier",
+            "members": [
+              "Tier1",
+              "Tier2",
+              "Tier3"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_contract(AggregatorV3Interface)45)": {
+            "label": "mapping(address => contract AggregatorV3Interface)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_enum(VerificationTier)5408,t_enum(VerificationResult)5413)": {
+            "label": "mapping(enum VerificationOracle.VerificationTier => enum VerificationOracle.VerificationResult)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_enum(VerificationTier)5408,t_enum(VerificationResult)5413))": {
+            "label": "mapping(uint256 => mapping(enum VerificationOracle.VerificationTier => enum VerificationOracle.VerificationResult))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Dispute)5463_storage)": {
+            "label": "mapping(uint256 => struct VerificationOracle.Dispute)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(ImpactVerification)5444_storage)": {
+            "label": "mapping(uint256 => struct VerificationOracle.ImpactVerification)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Dispute)5463_storage": {
+            "label": "struct VerificationOracle.Dispute",
+            "members": [
+              {
+                "label": "disputeId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "verificationId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "disputer",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "reason",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "stakeAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "resolved",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "resolver",
+                "type": "t_address",
+                "offset": 1,
+                "slot": "6"
+              },
+              {
+                "label": "disputeWon",
+                "type": "t_bool",
+                "offset": 21,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(ImpactVerification)5444_storage": {
+            "label": "struct VerificationOracle.ImpactVerification",
+            "members": [
+              {
+                "label": "verificationId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "charity",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "projectId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "evidenceHash",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "result",
+                "type": "t_enum(VerificationResult)5413",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "tier",
+                "type": "t_enum(VerificationTier)5408",
+                "offset": 1,
+                "slot": "4"
+              },
+              {
+                "label": "submittedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "verifiedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "verifiedBy",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "stakeAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "disputed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "tierResults",
+                "type": "t_mapping(t_enum(VerificationTier)5408,t_enum(VerificationResult)5413)",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Pausable": [
+            {
+              "contract": "PausableUpgradeable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol:21",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.AccessControl": [
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "_roles",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)72_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:62",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "be01adc568f5e99607b4b34f7024b320ebf8d540c844a7de2f3bb821a95a2d77": {
+      "address": "0x321ABdBF4a5fB5d9fD7aCA19fEb5c00d52809062",
+      "txHash": "0x3742251871fffdb4cbae5dd840c1eefea68f411de1e098793861cfd99654de83",
+      "layout": {
+        "solcVersion": "0.8.22",
+        "storage": [
+          {
+            "label": "verifications",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_uint256,t_struct(Verification)3160_storage)",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:76"
+          },
+          {
+            "label": "votes",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(Vote)3172_storage))",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:77"
+          },
+          {
+            "label": "verificationVoters",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:78"
+          },
+          {
+            "label": "verifiers",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_struct(Verifier)3185_storage)",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:79"
+          },
+          {
+            "label": "stakedAmounts",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:80"
+          },
+          {
+            "label": "verificationCounter",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:82"
+          },
+          {
+            "label": "minimumStake",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_uint256",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:83"
+          },
+          {
+            "label": "minimumVotes",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_uint256",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:84"
+          },
+          {
+            "label": "consensusThreshold",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_uint256",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:85"
+          },
+          {
+            "label": "slashingPercentage",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_uint256",
+            "contract": "CrowdsourcedVerification",
+            "src": "contracts/CrowdsourcedVerification.sol:86"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)72_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AccessControlStorage)82_storage": {
+            "label": "struct AccessControlUpgradeable.AccessControlStorage",
+            "members": [
+              {
+                "label": "_roles",
+                "type": "t_mapping(t_bytes32,t_struct(RoleData)72_storage)",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(InitializableStorage)193_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(PausableStorage)344_storage": {
+            "label": "struct PausableUpgradeable.PausableStorage",
+            "members": [
+              {
+                "label": "_paused",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)408_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoleData)72_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "hasRole",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(VerificationStatus)3138": {
+            "label": "enum CrowdsourcedVerification.VerificationStatus",
+            "members": [
+              "Pending",
+              "Approved",
+              "Rejected",
+              "Disputed"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_enum(VoteOption)3133": {
+            "label": "enum CrowdsourcedVerification.VoteOption",
+            "members": [
+              "Approve",
+              "Reject"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_struct(Verifier)3185_storage)": {
+            "label": "mapping(address => struct CrowdsourcedVerification.Verifier)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(Vote)3172_storage)": {
+            "label": "mapping(address => struct CrowdsourcedVerification.Vote)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+            "label": "mapping(uint256 => address[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_struct(Vote)3172_storage))": {
+            "label": "mapping(uint256 => mapping(address => struct CrowdsourcedVerification.Vote))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Verification)3160_storage)": {
+            "label": "mapping(uint256 => struct CrowdsourcedVerification.Verification)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Verification)3160_storage": {
+            "label": "struct CrowdsourcedVerification.Verification",
+            "members": [
+              {
+                "label": "verificationId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "charity",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "projectId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "evidenceHash",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(VerificationStatus)3138",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "submittedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "consensusReachedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "approveVotes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "rejectVotes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "totalVotes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              }
+            ],
+            "numberOfBytes": "320"
+          },
+          "t_struct(Verifier)3185_storage": {
+            "label": "struct CrowdsourcedVerification.Verifier",
+            "members": [
+              {
+                "label": "verifierAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "reputationScore",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "totalStaked",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "successfulVerifications",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "falseVerifications",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "active",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_struct(Vote)3172_storage": {
+            "label": "struct CrowdsourcedVerification.Vote",
+            "members": [
+              {
+                "label": "voter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "option",
+                "type": "t_enum(VoteOption)3133",
+                "offset": 20,
+                "slot": "0"
+              },
+              {
+                "label": "stakeAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "slashed",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Pausable": [
+            {
+              "contract": "PausableUpgradeable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol:21",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.AccessControl": [
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "_roles",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)72_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:62",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "021d000d40c7a7fa9d9687ef609c8292473846bde5425cf6a6bcab1edd929fd0": {
+      "address": "0x937c8A9fc0460e5b0A8a7b1ED77605697c86Fedf",
+      "txHash": "0xcc0ce67144db399963da2c13644f766f85cd0b1d1edcbec1480ae1d232097923",
+      "layout": {
+        "solcVersion": "0.8.22",
+        "storage": [
+          {
+            "label": "professionalVerifiers",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_struct(ProfessionalVerifier)2083_storage)",
+            "contract": "ProfessionalVerification",
+            "src": "contracts/ProfessionalVerification.sol:64"
+          },
+          {
+            "label": "verifications",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_struct(Verification)2106_storage)",
+            "contract": "ProfessionalVerification",
+            "src": "contracts/ProfessionalVerification.sol:65"
+          },
+          {
+            "label": "verifierApprovals",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "ProfessionalVerification",
+            "src": "contracts/ProfessionalVerification.sol:66"
+          },
+          {
+            "label": "verifierRejections",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "ProfessionalVerification",
+            "src": "contracts/ProfessionalVerification.sol:67"
+          },
+          {
+            "label": "verificationCounter",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "ProfessionalVerification",
+            "src": "contracts/ProfessionalVerification.sol:69"
+          },
+          {
+            "label": "requiredApprovals",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "ProfessionalVerification",
+            "src": "contracts/ProfessionalVerification.sol:70"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)26_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AccessControlStorage)36_storage": {
+            "label": "struct AccessControlUpgradeable.AccessControlStorage",
+            "members": [
+              {
+                "label": "_roles",
+                "type": "t_mapping(t_bytes32,t_struct(RoleData)26_storage)",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(InitializableStorage)147_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(PausableStorage)298_storage": {
+            "label": "struct PausableUpgradeable.PausableStorage",
+            "members": [
+              {
+                "label": "_paused",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)362_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoleData)26_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "hasRole",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(VerificationStatus)2066": {
+            "label": "enum ProfessionalVerification.VerificationStatus",
+            "members": [
+              "Pending",
+              "Approved",
+              "Rejected",
+              "Disputed"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_struct(ProfessionalVerifier)2083_storage)": {
+            "label": "mapping(address => struct ProfessionalVerification.ProfessionalVerifier)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Verification)2106_storage)": {
+            "label": "mapping(uint256 => struct ProfessionalVerification.Verification)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(ProfessionalVerifier)2083_storage": {
+            "label": "struct ProfessionalVerification.ProfessionalVerifier",
+            "members": [
+              {
+                "label": "verifierAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "organizationName",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "accreditationNumber",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "reputationScore",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "totalVerifications",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "successfulVerifications",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "active",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "registeredAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              }
+            ],
+            "numberOfBytes": "256"
+          },
+          "t_struct(Verification)2106_storage": {
+            "label": "struct ProfessionalVerification.Verification",
+            "members": [
+              {
+                "label": "verificationId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "charity",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "projectId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "evidenceHash",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(VerificationStatus)2066",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "submittedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "verifiedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "verifiers",
+                "type": "t_array(t_address)dyn_storage",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "approvalCount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "rejectionCount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              }
+            ],
+            "numberOfBytes": "320"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:43",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Pausable": [
+            {
+              "contract": "PausableUpgradeable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol:21",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.AccessControl": [
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "_roles",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)26_storage)",
               "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:62",
               "offset": 0,
               "slot": "0"

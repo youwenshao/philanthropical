@@ -38,8 +38,15 @@ export function useDonations(params?: { donor?: Address; charity?: Address; limi
   return useQuery({
     queryKey: ["donations", params],
     queryFn: () => fetchDonations(params),
-    staleTime: 10000, // 10 seconds
-    refetchInterval: 30000, // Refetch every 30 seconds
+    staleTime: 30 * 1000, // 30 seconds - data is fresh for 30s
+    gcTime: 5 * 60 * 1000, // 5 minutes - cache for 5 minutes (formerly cacheTime)
+    refetchOnWindowFocus: true, // Refetch when window regains focus
+    refetchOnReconnect: true, // Refetch when network reconnects
+    refetchInterval: 60 * 1000, // Refetch every minute in background
+    retry: 3, // Retry failed requests 3 times
+    retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000), // Exponential backoff
   });
 }
+
+
 

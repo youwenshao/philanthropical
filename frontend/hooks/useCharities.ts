@@ -26,8 +26,15 @@ export function useCharities() {
   return useQuery({
     queryKey: ["charities"],
     queryFn: fetchCharities,
-    staleTime: 30000, // 30 seconds
-    refetchInterval: 60000, // Refetch every minute
+    staleTime: 5 * 60 * 1000, // 5 minutes - charities don't change often
+    gcTime: 10 * 60 * 1000, // 10 minutes - cache for 10 minutes
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+    refetchInterval: 5 * 60 * 1000, // Refetch every 5 minutes
+    retry: 3,
+    retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
   });
 }
+
+
 

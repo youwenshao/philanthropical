@@ -21,6 +21,7 @@ contract CharityVerification is
 {
     bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
     bytes32 public constant VERIFIER_ROLE = keccak256("VERIFIER_ROLE");
+    bytes32 public constant PROFESSIONAL_VERIFIER_ROLE = keccak256("PROFESSIONAL_VERIFIER_ROLE");
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
     // Verification status enum
@@ -50,6 +51,15 @@ contract CharityVerification is
     uint256 public requiredApprovals;
     uint256 public challengePeriodDuration; // in seconds
 
+    // Professional verifier information
+    struct ProfessionalVerifier {
+        address verifierAddress;
+        string organizationName;
+        string accreditationNumber;
+        bool active;
+        uint256 registeredAt;
+    }
+
     // State mappings
     mapping(address => Charity) public charities;
     mapping(address => mapping(address => bool)) public verifierApprovals;
@@ -57,6 +67,7 @@ contract CharityVerification is
     mapping(address => address[]) public charityVerifiers;
     mapping(address => uint256) public reputationHistory;
     mapping(address => uint256) public fraudReports;
+    mapping(address => ProfessionalVerifier) public professionalVerifiers;
 
     // Events
     event CharityRegistered(
@@ -107,6 +118,16 @@ contract CharityVerification is
         address indexed charity,
         uint256 amount,
         address indexed beneficiary,
+        uint256 timestamp
+    );
+    event ProfessionalVerifierRegistered(
+        address indexed verifier,
+        string organizationName,
+        string accreditationNumber,
+        uint256 timestamp
+    );
+    event ProfessionalVerifierRemoved(
+        address indexed verifier,
         uint256 timestamp
     );
 
@@ -382,6 +403,75 @@ contract CharityVerification is
         uint256 newDuration
     ) external onlyRole(ADMIN_ROLE) {
         challengePeriodDuration = newDuration;
+    }
+
+    /**
+     * @dev Register a professional verifier (NGO organization)
+     * @param verifierAddress Address of the verifier
+     * @param organizationName Name of the organization
+     * @param accreditationNumber Accreditation or registration number
+     */
+    function registerProfessionalVerifier(
+        address verifierAddress,
+        string memory organizationName,
+        string memory accreditationNumber
+    ) external onlyRole(ADMIN_ROLE) whenNotPaused {
+        require(
+            verifierAddress != address(0),
+            "CharityVerification: invalid address"
+        );
+        require(
+            professionalVerifiers[verifierAddress].verifierAddress == address(0),
+            "CharityVerification: already registered"
+        );
+        require(
+            bytes(organizationName).length > 0,
+            "CharityVerification: empty name"
+        );
+
+        professionalVerifiers[verifierAddress] = ProfessionalVerifier({
+            verifierAddress: verifierAddress,
+            organizationName: organizationName,
+            accreditationNumber: accreditationNumber,
+            active: true,
+            registeredAt: block.timestamp
+        });
+
+        _grantRole(PROFESSIONAL_VERIFIER_ROLE, verifierAddress);
+
+        emit ProfessionalVerifierRegistered(
+            verifierAddress,
+            organizationName,
+            accreditationNumber,
+            block.timestamp
+        );
+    }
+
+    /**
+     * @dev Remove a professional verifier
+     * @param verifierAddress Address of the verifier to remove
+     */
+    function removeProfessionalVerifier(
+        address verifierAddress
+    ) external onlyRole(ADMIN_ROLE) {
+        require(
+            professionalVerifiers[verifierAddress].verifierAddress != address(0),
+            "CharityVerification: not registered"
+        );
+
+        professionalVerifiers[verifierAddress].active = false;
+        _revokeRole(PROFESSIONAL_VERIFIER_ROLE, verifierAddress);
+
+        emit ProfessionalVerifierRemoved(verifierAddress, block.timestamp);
+    }
+
+    /**
+     * @dev Get professional verifier information
+     */
+    function getProfessionalVerifier(
+        address verifier
+    ) external view returns (ProfessionalVerifier memory) {
+        return professionalVerifiers[verifier];
     }
 
     // Pausable functions

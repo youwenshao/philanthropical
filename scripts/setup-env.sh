@@ -132,3 +132,5 @@ echo "2. Make sure your Supabase database migrations have been run"
 echo "3. Restart your development servers if they're running"
 echo ""
 
+
+

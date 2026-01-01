@@ -119,15 +119,17 @@ export default function AdminPage() {
           </Card>
         </Link>
 
-        <Card className="opacity-50">
-          <CardHeader>
-            <BarChart3 className="h-8 w-8 mb-2" />
-            <CardTitle>Analytics</CardTitle>
-            <CardDescription>
-              Advanced analytics and reporting (Coming soon)
-            </CardDescription>
-          </CardHeader>
-        </Card>
+        <Link href="/analytics">
+          <Card className="hover:bg-accent transition-colors cursor-pointer h-full">
+            <CardHeader>
+              <BarChart3 className="h-8 w-8 mb-2" />
+              <CardTitle>Analytics</CardTitle>
+              <CardDescription>
+                Advanced analytics and reporting
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </Link>
       </div>
 
       <div className="mt-8">

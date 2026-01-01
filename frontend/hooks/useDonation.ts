@@ -53,7 +53,7 @@ export function useDonation() {
 
   // Check if user has sufficient balance
   const hasBalance = (() => {
-    if (!amount || !balance) return false;
+    if (!amount || !balance || typeof balance !== 'bigint') return false;
     const amountBigInt = parseUnits(amount, decimals);
     return balance >= amountBigInt;
   })();
@@ -82,7 +82,12 @@ export function useDonation() {
         tokenAddress: usdcAddress,
       });
 
-      writeContract(tx);
+      writeContract({
+        address: tx.address,
+        abi: tx.abi,
+        functionName: tx.functionName as "createDonation",
+        args: [tx.args[0] as `0x${string}`, tx.args[1] as bigint],
+      });
     } catch (err: any) {
       setDonationState({
         step: "error",
