@@ -31,7 +31,21 @@ export async function GET(request: NextRequest) {
       throw error;
     }
 
-    return NextResponse.json(data || []);
+    // Transform snake_case to camelCase for frontend
+    const transformedData = (data || []).map((charity: any) => ({
+      address: charity.address,
+      name: charity.name,
+      description: charity.description,
+      registrationNumber: charity.registration_number,
+      reputationScore: charity.reputation_score,
+      verificationStatus: charity.verification_status,
+      createdAt: charity.created_at,
+      verifiedAt: charity.verified_at,
+      verifiedBy: charity.verified_by,
+      challengePeriodEnd: charity.challenge_period_end,
+    }));
+
+    return NextResponse.json(transformedData);
   } catch (error: any) {
     console.error("Charities API error:", error);
     return NextResponse.json(

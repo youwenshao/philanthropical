@@ -6,7 +6,7 @@ import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { config } from "@/lib/wagmi";
 import { polygonAmoy } from "wagmi/chains";
 import "@rainbow-me/rainbowkit/styles.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Optimized QueryClient configuration
 function makeQueryClient() {
@@ -50,6 +50,22 @@ function getQueryClient() {
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const queryClient = getQueryClient();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Prevent hydration mismatch by not rendering RainbowKit on server
+  if (!mounted) {
+    return (
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
+      </WagmiProvider>
+    );
+  }
 
   return (
     <WagmiProvider config={config}>

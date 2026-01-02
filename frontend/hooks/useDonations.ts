@@ -22,16 +22,25 @@ async function fetchDonations(params?: {
   charity?: Address;
   limit?: number;
 }): Promise<Donation[]> {
-  const queryParams = new URLSearchParams();
-  if (params?.donor) queryParams.append("donor", params.donor);
-  if (params?.charity) queryParams.append("charity", params.charity);
-  if (params?.limit) queryParams.append("limit", params.limit.toString());
+  try {
+    const queryParams = new URLSearchParams();
+    if (params?.donor) queryParams.append("donor", params.donor);
+    if (params?.charity) queryParams.append("charity", params.charity);
+    if (params?.limit) queryParams.append("limit", params.limit.toString());
 
-  const response = await fetch(`/api/donations?${queryParams.toString()}`);
-  if (!response.ok) {
-    throw new Error("Failed to fetch donations");
+    const response = await fetch(`/api/donations?${queryParams.toString()}`);
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => "Unknown error");
+      throw new Error(`Failed to fetch donations: ${response.status} ${errorText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    if (error instanceof Error) {
+      throw error;
+    }
+    throw new Error("Failed to fetch donations: Unknown error");
   }
-  return response.json();
 }
 
 export function useDonations(params?: { donor?: Address; charity?: Address; limit?: number }) {

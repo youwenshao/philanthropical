@@ -11,12 +11,27 @@ const config: Config = {
   theme: {
   	container: {
   		center: true,
-  		padding: '2rem',
+  		padding: {
+  			DEFAULT: '1rem',
+  			sm: '1.5rem',
+  			lg: '2rem',
+  			xl: '2.5rem',
+  			'2xl': '3rem',
+  		},
   		screens: {
-  			'2xl': '1400px'
+  			sm: '640px',
+  			md: '768px',
+  			lg: '1024px',
+  			xl: '1280px',
+  			'2xl': '1536px',
   		}
   	},
   	extend: {
+  		spacing: {
+  			'section': '6rem',
+  			'section-sm': '4rem',
+  			'section-lg': '8rem',
+  		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
@@ -84,7 +99,11 @@ const config: Config = {
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'fade-in': 'fadeIn 0.3s ease-in-out',
+  			'slide-in-up': 'slideInUp 0.3s ease-out',
+  			'slide-in-right': 'slideInRight 0.3s ease-out',
+  			'scale-in': 'scaleIn 0.2s ease-out',
   		}
   	}
   },

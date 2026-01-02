@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { useCharities } from "@/hooks/useCharities";
+import { getCharityLogo } from "@/lib/charityLogos";
 
 interface Charity {
   address: Address;
@@ -101,9 +102,45 @@ export function CharitySelector({ selectedCharity, onSelect }: CharitySelectorPr
             onClick={() => onSelect(charity.address)}
           >
             <CardHeader>
-              <div className="flex items-start justify-between">
-                <CardTitle className="text-lg">{charity.name}</CardTitle>
-                {getStatusBadge(charity.verificationStatus)}
+              <div className="flex items-start gap-3 mb-2">
+                {(() => {
+                  const logoPath = getCharityLogo(charity);
+                  // Always show logo container for debugging
+                  return (
+                    <div className="flex-shrink-0 h-12 w-12 rounded-lg overflow-hidden bg-muted flex items-center justify-center">
+                      {logoPath ? (
+                        <img
+                          src={logoPath}
+                          alt={`${charity.name} logo`}
+                          className="h-full w-full object-contain p-1"
+                          style={{ minWidth: '48px', minHeight: '48px' }}
+                          onLoad={() => {
+                            console.log('✅ Logo loaded successfully:', logoPath, 'for', charity.name);
+                          }}
+                          onError={(e) => {
+                            console.error('❌ Logo failed to load:', logoPath, 'for', charity.name, e);
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const parent = target.parentElement;
+                            if (parent) {
+                              parent.innerHTML = `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; color: rgb(var(--primary));">${charity.name.charAt(0)}</div>`;
+                            }
+                          }}
+                        />
+                      ) : (
+                        <div className="h-full w-full flex items-center justify-center text-lg font-bold text-primary">
+                          {charity.name.charAt(0)}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-2">
+                    <CardTitle className="text-lg">{charity.name}</CardTitle>
+                    {getStatusBadge(charity.verificationStatus)}
+                  </div>
+                </div>
               </div>
               <CardDescription className="line-clamp-2">
                 {charity.description || "No description available"}

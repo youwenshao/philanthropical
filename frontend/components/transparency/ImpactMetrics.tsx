@@ -8,13 +8,23 @@ import { Loader2 } from "lucide-react";
 import { formatUnits } from "viem";
 
 export function ImpactMetrics() {
-  const { data: donations, isLoading: donationsLoading } = useDonations();
-  const { data: charities, isLoading: charitiesLoading } = useCharities();
+  const { data: donations, isLoading: donationsLoading, error: donationsError } = useDonations();
+  const { data: charities, isLoading: charitiesLoading, error: charitiesError } = useCharities();
 
   if (donationsLoading || charitiesLoading) {
     return (
       <div className="flex items-center justify-center py-8">
         <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
+  }
+
+  if (donationsError || charitiesError) {
+    return (
+      <div className="flex items-center justify-center py-8">
+        <p className="text-muted-foreground">
+          {donationsError?.message || charitiesError?.message || "Failed to load metrics"}
+        </p>
       </div>
     );
   }
@@ -32,8 +42,8 @@ export function ImpactMetrics() {
   const avgDonation = totalDonations > 0 ? totalDonated / BigInt(totalDonations) : 0n;
 
   return (
-    <div className="grid gap-4 md:grid-cols-4">
-      <Card>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <Card variant="elevated">
         <CardHeader>
           <CardTitle className="text-lg">Total Donated</CardTitle>
           <CardDescription>All time</CardDescription>
@@ -43,7 +53,7 @@ export function ImpactMetrics() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card variant="elevated">
         <CardHeader>
           <CardTitle className="text-lg">Total Donations</CardTitle>
           <CardDescription>Number of transactions</CardDescription>
@@ -53,7 +63,7 @@ export function ImpactMetrics() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card variant="elevated">
         <CardHeader>
           <CardTitle className="text-lg">Verified Charities</CardTitle>
           <CardDescription>Active organizations</CardDescription>
@@ -63,7 +73,7 @@ export function ImpactMetrics() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card variant="elevated">
         <CardHeader>
           <CardTitle className="text-lg">Average Donation</CardTitle>
           <CardDescription>Per transaction</CardDescription>

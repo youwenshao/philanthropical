@@ -8,8 +8,8 @@ import { Loader2 } from "lucide-react";
 import { Address } from "viem";
 
 export function DonationFlowChart() {
-  const { data: donations, isLoading: donationsLoading } = useDonations();
-  const { data: charities, isLoading: charitiesLoading } = useCharities();
+  const { data: donations, isLoading: donationsLoading, error: donationsError } = useDonations();
+  const { data: charities, isLoading: charitiesLoading, error: charitiesError } = useCharities();
 
   if (donationsLoading || charitiesLoading) {
     return (
@@ -22,6 +22,22 @@ export function DonationFlowChart() {
           <div className="flex items-center justify-center py-8">
             <Loader2 className="h-8 w-8 animate-spin" />
           </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  if (donationsError || charitiesError) {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle>Donation Flow</CardTitle>
+          <CardDescription>Visualization of donation distribution</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-destructive text-center py-8">
+            {donationsError?.message || charitiesError?.message || "Failed to load donation data"}
+          </p>
         </CardContent>
       </Card>
     );

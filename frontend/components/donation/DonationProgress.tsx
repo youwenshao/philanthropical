@@ -41,46 +41,73 @@ export function DonationProgress({ currentStep, error }: DonationProgressProps) 
   return (
     <div className="w-full relative">
       <div className="flex items-center justify-between relative">
-        {/* Progress line */}
-        <div
-          className={cn(
-            "absolute top-5 left-0 h-0.5 transition-all",
-            currentIndex > 0 ? "bg-green-500" : "bg-muted"
-          )}
-          style={{
-            width: currentIndex > 0 ? `${(currentIndex / (steps.length - 1)) * 100}%` : "0%",
-          }}
+        {/* Background progress line - spans from first to last circle border */}
+        <div 
+          className="absolute top-5 h-0.5 bg-muted -z-10" 
+          style={{ 
+            left: '20px', // Start from right edge of first circle (radius = 20px)
+            right: '20px', // End at left edge of last circle
+          }} 
         />
-        <div className="absolute top-5 left-0 w-full h-0.5 bg-muted -z-10" />
+        
+        {/* Active progress line - extends from border of previous circle to border of current circle */}
+        {currentIndex > 0 && (
+          <div
+            className="absolute top-5 h-0.5 bg-green-500 transition-all -z-10"
+            style={{
+              left: '20px', // Start from right edge of first circle (radius = 20px)
+              // Width: percentage of distance between first and last circle borders
+              // Available space is (100% - 40px), we fill currentIndex/(steps.length-1) of it
+              width: `calc((100% - 40px) * ${currentIndex / (steps.length - 1)} + 20px)`,
+            }}
+          />
+        )}
 
-        {steps.map((step, index) => (
-          <div key={step.key} className="flex flex-col items-center flex-1 relative z-10">
-            <div
-              className={cn(
-                "flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors bg-background",
-                index < currentIndex
-                  ? "bg-green-500 border-green-500 text-white"
-                  : index === currentIndex
-                  ? error
-                    ? "bg-red-500 border-red-500 text-white"
-                    : "bg-primary border-primary text-white"
-                  : "border-muted-foreground text-muted-foreground"
-              )}
-            >
-              {getStepIcon(index)}
-            </div>
-            <div className="mt-2 text-center">
-              <p
+        {steps.map((step, index) => {
+          const isCompleted = index < currentIndex;
+          const isCurrent = index === currentIndex;
+          const isPending = index > currentIndex;
+
+          return (
+            <div key={step.key} className="flex flex-col items-center flex-1 relative z-10">
+              {/* Outer circle (border) */}
+              <div
                 className={cn(
-                  "text-sm font-medium",
-                  index <= currentIndex ? "text-foreground" : "text-muted-foreground"
+                  "flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors bg-background relative",
+                  isCompleted
+                    ? "border-green-500"
+                    : isCurrent
+                    ? error
+                      ? "border-red-500"
+                      : "border-primary"
+                    : "border-muted-foreground"
                 )}
               >
-                {step.label}
-              </p>
+                {/* Inner circle (filled) - only for current step */}
+                {isCurrent && !error && (
+                  <div className="absolute w-6 h-6 rounded-full bg-primary" />
+                )}
+                {isCurrent && error && (
+                  <div className="absolute w-6 h-6 rounded-full bg-red-500" />
+                )}
+                {/* Icon */}
+                <div className="relative z-10">
+                  {getStepIcon(index)}
+                </div>
+              </div>
+              <div className="mt-2 text-center">
+                <p
+                  className={cn(
+                    "text-sm font-medium",
+                    index <= currentIndex ? "text-foreground" : "text-muted-foreground"
+                  )}
+                >
+                  {step.label}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       {error && (
         <div className="mt-4 text-center">

@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -18,7 +20,7 @@ const nextConfig = {
     optimizeCss: true,
   },
   // Webpack optimizations
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, webpack }) => {
     // Optimize bundle size
     if (!isServer) {
       config.resolve.fallback = {
@@ -28,6 +30,29 @@ const nextConfig = {
         tls: false,
       };
     }
+    
+    // Replace React Native async-storage with a stub for both server and client
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@react-native-async-storage/async-storage': path.resolve(__dirname, 'lib/stubs/async-storage.js'),
+    };
+    
+    // Ignore React Native dependencies during SSR
+    if (isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@react-native': false,
+        'react-native': false,
+      };
+      
+      // Force MetaMask SDK to use browser version during SSR
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@metamask/sdk/dist/node/cjs/metamask-sdk.js': '@metamask/sdk/dist/browser/es/metamask-sdk.js',
+        '@metamask/sdk/dist/node': '@metamask/sdk/dist/browser',
+      };
+    }
+    
     return config;
   },
   async headers() {

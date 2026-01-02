@@ -15,11 +15,20 @@ export interface Charity {
 }
 
 async function fetchCharities(): Promise<Charity[]> {
-  const response = await fetch("/api/charities");
-  if (!response.ok) {
-    throw new Error("Failed to fetch charities");
+  try {
+    const response = await fetch("/api/charities");
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => "Unknown error");
+      throw new Error(`Failed to fetch charities: ${response.status} ${errorText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    if (error instanceof Error) {
+      throw error;
+    }
+    throw new Error("Failed to fetch charities: Unknown error");
   }
-  return response.json();
 }
 
 export function useCharities() {
